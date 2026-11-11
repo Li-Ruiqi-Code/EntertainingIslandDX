@@ -1,22 +1,12 @@
-# EntertainingIsland
-
-> ## 停止开发公告
->
-> **EntertainingIsland 已停止开发**，我们正在全力制作新一代 **EntertainingIslandDX**！
->
-> 请前往以下地址下载最新版：
->
-> **https://1813038527.share.123pan.cn/123pan/LQJuVv-gOfud**
->
-> EntertainingIslandDX 一定会带给你不一样的体验，希望你喜欢它。感谢大家一直以来的支持！也欢迎使用我们的续作 [ClassIslandInjector](https://github.com/BSOD-MEMZ/ClassIslandInjector/)
+# EntertainingIslandDX
 
 <img src="docs\EntertainingIsland.jpg" alt="banner" style="zoom: 33%;" />
 
 一个为 [ClassIsland](https://github.com/ClassIsland/ClassIsland) 设计的娱乐功能插件，让同学眼前一亮，老师眼前一黑。兼容 ClassIsland 2.0.1+。
 
-> 欢迎访问我的个人网站，专门记录我在学校干坏事：[xxtsoft.top](https://xxtsoft.top)
->
-> 也可以去B站看我发的宣传片 [立即观看，关注BSOD-MEMZ谢谢喵](https://www.bilibili.com/video/BV15KEt6mEFP)
+> **本项目基于 [BSOD-MEMZ/EntertainingIsland](https://github.com/BSOD-MEMZ/EntertainingIsland) 修改而来**，原作者为 xxt8582753。
+> 主要改动：移除全部全局热键与「窗外有老师警报」功能、点名器改为完全随机、头像课程表显示当堂上课时间。
+> 详见 [发布说明](https://github.com/Li-Ruiqi-Code/EntertainingIslandDX/releases)。
 
 ---
 
@@ -33,7 +23,7 @@
 | **体育赛事**   | NBA / 英超 / 西甲等比赛实时比分           |
 | **每日运势**   | 每日宜忌运势                              |
 | **摄像头安全** | 摄像头被调用时显示绿色圆点提醒            |
-| **自动化行动** | 17 个行动 + 2 个触发器，可按时间/状态自动触发 |
+| **自动化行动** | 15 个行动 + 2 个触发器，可按时间/状态自动触发 |
 
 > **本插件不注册任何全局快捷键。** 需要热键类操作时，请在 ClassIsland 的「自动化」中新建规则，
 > 把对应行动绑定到你自己的触发方式上（ClassIsland 自带键盘快捷键触发）。
@@ -137,7 +127,7 @@
 
 ## ClassIsland 自动化
 
-17 个自动化行动 + 2 个触发器，支持在 ClassIsland 规则中按时间/状态触发：
+15 个自动化行动 + 2 个触发器，支持在 ClassIsland 规则中按时间/状态触发：
 
 | 类型       | 行动                                       |
 | ---------- | ------------------------------------------ |
