@@ -49,7 +49,7 @@ public partial class MySettingsPage : SettingsPageBase
     public string PluginInfoText =>
         $"EntertainingIsland\n" +
         $"版本: {PluginEntry.Info.Manifest.Version}\n" +
-        $"2026 xxtsoft 对一切提前开学&违规补课等行为致以最强烈的谴责";
+        $"2026 Li-Ruiqi-Code 对一切提前开学&违规补课等行为致以最强烈的谴责";
 
     public MySettingsPage()
     {

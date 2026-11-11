@@ -132,8 +132,8 @@
                     <StackPanel Spacing="8">
                         <TextBlock Text="了解更多" FontSize="15" FontWeight="SemiBold"/>
                         <StackPanel Spacing="6">
-                            <Button Content="观看宣传片" Click="LinkBilibili_Click"/>
-                            <Button Content="访问作者网站" Click="LinkAuthor_Click"/>
+                            <Button Content="查看项目主页" Click="LinkProject_Click"/>
+                            <Button Content="查看更新日志" Click="LinkReleases_Click"/>
                         </StackPanel>
                     </StackPanel>
                 </Border>

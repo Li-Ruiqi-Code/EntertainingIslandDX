@@ -23,6 +23,7 @@
 - **项目更名并改用 GPLv3 许可证**：新增 `LICENSE`，源码文件头部添加版权声明。
 - 统一版本号：`manifest.yml` / `AssemblyInfo.cs` 均为 `1.2.0.0`。
 - manifest 仓库地址与分支更新为 `Li-Ruiqi-Code/EntertainingIslandDX` / `main`。
+- 程序集元数据与插件作者改为 `Li-Ruiqi-Code`，移除原作者个人站点与宣传片入口。
 
 ### 修复
 
@@ -41,4 +42,4 @@
 - 移除 README 中指向原作者网盘、个人站点与 B 站宣传片的链接。
 - 更新 OOBE 欢迎向导与 README，移除热键与警报相关描述。
 
-<!-- CLASSISLAND_PKG_MD5 {"entertainingisland.app.cipx": "54d8108b376bf7833ee952061f7df92e"} -->
+<!-- CLASSISLAND_PKG_MD5 {"entertainingisland.app.cipx": "d44f86e81832679582ffbfebf9a40c36"} -->

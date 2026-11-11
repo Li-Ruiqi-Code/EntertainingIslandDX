@@ -88,13 +88,13 @@ public partial class FeaturesPage : UserControl, IWelcomePage
     private void ButtonNext_OnClick(object? sender, RoutedEventArgs e) => WelcomeWindow.FromControl(this)?.NavigateForward();
     private void ButtonBack_OnClick(object? sender, RoutedEventArgs e) => WelcomeWindow.FromControl(this)?.NavigateBack();
 
-    private void LinkBilibili_Click(object? sender, RoutedEventArgs e)
+    private void LinkProject_Click(object? sender, RoutedEventArgs e)
     {
-        Process.Start(new ProcessStartInfo("https://www.bilibili.com/video/BV15KEt6mEFP/") { UseShellExecute = true });
+        Process.Start(new ProcessStartInfo("https://github.com/Li-Ruiqi-Code/EntertainingIslandDX") { UseShellExecute = true });
     }
 
-    private void LinkAuthor_Click(object? sender, RoutedEventArgs e)
+    private void LinkReleases_Click(object? sender, RoutedEventArgs e)
     {
-        Process.Start(new ProcessStartInfo("https://xxtsoft.top") { UseShellExecute = true });
+        Process.Start(new ProcessStartInfo("https://github.com/Li-Ruiqi-Code/EntertainingIslandDX/releases") { UseShellExecute = true });
     }
 }
