@@ -1,0 +1,96 @@
+<ci:SettingsPageBase 
+    x:Class="EntertainingIsland.Views.SettingsPages.MySettingsPage"
+    x:Name="RootPage"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:ci="http://classisland.tech/schemas/xaml/core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fa="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
+    xmlns:local="clr-namespace:EntertainingIsland.Views.SettingsPages"
+    mc:Ignorable="d" 
+    d:DesignHeight="900" d:DesignWidth="800"
+    d:DataContext="{d:DesignInstance local:MySettingsPage}">
+
+    <ScrollViewer>
+        <StackPanel Classes="settings-container animated-intro">
+        <!-- 
+            <fa:SettingsExpander IconSource="{ci:FluentIconSource &#xE9E4;}"
+                                 Header="显示欢迎消息"
+                                 Description="应用启动时在控制台输出欢迎信息。">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch IsChecked="{Binding Settings.ShowWelcomeMessage}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander> -->
+
+            <!-- ===== 功能开关 ===== -->
+            <fa:SettingsExpander IconSource="{ci:FluentIconSource &#xEDE9;}"
+                                 Header="功能开关"
+                                 Description="启用/禁用各功能模块。关闭后需重启 ClassIsland 生效。"
+                                 IsExpanded="True">
+                <StackPanel Spacing="4" Margin="0,8,0,0">
+
+                    <!-- 完整功能模块 -->
+                    <TextBlock Text="完整功能模块" FontWeight="Bold" FontSize="13" Margin="0,0,0,4" />
+                    <ToggleSwitch IsChecked="{Binding Ft.LuckyPicker}" OffContent="点名器（设置页+浮窗+通知+服务）" OnContent="点名器（设置页+浮窗+通知+服务）" />
+
+                    <!-- 组件 -->
+                    <TextBlock Text="组件" FontWeight="Bold" FontSize="13" Margin="0,8,0,4" />
+                    <ToggleSwitch IsChecked="{Binding Ft.NovelReader}" OffContent="小说阅读器" OnContent="小说阅读器" />
+                    <ToggleSwitch IsChecked="{Binding Ft.Catchphrase}" OffContent="口头禅记录" OnContent="口头禅记录" />
+                    <ToggleSwitch IsChecked="{Binding Ft.AvatarClassSchedule}" OffContent="头像课程表" OnContent="头像课程表" />
+                    <ToggleSwitch IsChecked="{Binding Ft.RssNews}" OffContent="RSS 新闻" OnContent="RSS 新闻" />
+                    <ToggleSwitch IsChecked="{Binding Ft.Sports}" OffContent="体育赛事" OnContent="体育赛事" />
+                    <ToggleSwitch IsChecked="{Binding Ft.CameraStatus}" OffContent="摄像头安全指示器" OnContent="摄像头安全指示器" />
+                    <ToggleSwitch IsChecked="{Binding Ft.Fortune}" OffContent="每日运势" OnContent="每日运势" />
+
+                    <!-- 提醒提供方 -->
+                    <TextBlock Text="提醒提供方" FontWeight="Bold" FontSize="13" Margin="0,12,0,4" />
+                    <ToggleSwitch IsChecked="{Binding Ft.ClassEndingReminder}" OffContent="下课倒计时提醒" OnContent="下课倒计时提醒" />
+                    <ToggleSwitch IsChecked="{Binding Ft.LuckyPickerNotifier}" OffContent="点名器通知" OnContent="点名器通知" />
+
+                    <!-- 自动化行动 -->
+                    <TextBlock Text="自动化行动" FontWeight="Bold" FontSize="13" Margin="0,12,0,4" />
+                    <ToggleSwitch IsChecked="{Binding Ft.ToggleVisibility}" OffContent="切换所有组件显隐" OnContent="切换所有组件显隐" />
+                    <ToggleSwitch IsChecked="{Binding Ft.ShowAllComponents}" OffContent="显示所有组件" OnContent="显示所有组件" />
+                    <ToggleSwitch IsChecked="{Binding Ft.HideAllComponents}" OffContent="隐藏所有组件" OnContent="隐藏所有组件" />
+                    <ToggleSwitch IsChecked="{Binding Ft.NovelActions}" OffContent="小说阅读器控制（暂停/翻页等）" OnContent="小说阅读器控制（暂停/翻页等）" />
+                    <ToggleSwitch IsChecked="{Binding Ft.RssActions}" OffContent="RSS 新闻翻页" OnContent="RSS 新闻翻页" />
+                    <ToggleSwitch IsChecked="{Binding Ft.CatchphraseAddAction}" OffContent="口头禅 +1" OnContent="口头禅 +1" />
+                    <ToggleSwitch IsChecked="{Binding Ft.CatchphraseClearAction}" OffContent="口头禅清零" OnContent="口头禅清零" />
+                    <ToggleSwitch IsChecked="{Binding Ft.CameraActions}" OffContent="摄像头监控控制（切换/启/停）" OnContent="摄像头监控控制（切换/启/停）" />
+
+                    <!-- 自动化触发器 -->
+                    <TextBlock Text="自动化触发器" FontWeight="Bold" FontSize="13" Margin="0,12,0,4" />
+                    <ToggleSwitch IsChecked="{Binding Ft.CameraTriggers}" OffContent="摄像头使用/停止事件触发" OnContent="摄像头使用/停止事件触发" />
+
+                </StackPanel>
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander IconSource="{ci:FluentIconSource &#xE0B3;}"
+                                 Header="欢迎向导"
+                                 Description="重新运行 EntertainingIsland 的首次设置向导。">
+                <Button Content="重新运行欢迎向导" Click="ButtonReRunOobe_OnClick"
+                        Margin="0,8,0,0" />
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander IconSource="{ci:FluentIconSource &#xE61C;}"
+                                 Header="清除数据"
+                                 Description="删除所有设置和缓存文件，恢复为全新安装状态。此操作不可撤销。">
+                <Button Content="清除所有数据" Click="ButtonClearData_OnClick"
+                        Margin="0,8,0,0"
+                        Foreground="{DynamicResource SystemFillColorCriticalBrush}" />
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander IconSource="{ci:FluentIconSource &#xE0C1;}"
+                                 Header="关于 EntertainingIsland">
+                <TextBlock Text="{Binding PluginInfoText}" 
+                           Opacity="0.7"
+                           TextWrapping="Wrap"
+                           Margin="0,8,0,0" />
+            </fa:SettingsExpander>
+
+        </StackPanel>
+    </ScrollViewer>
+
+</ci:SettingsPageBase>

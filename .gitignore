@@ -1,0 +1,33 @@
+# ===== 编译输出 =====
+bin/
+obj/
+out/
+out2/
+
+# ===== IDE =====
+.vs/
+.vscode/
+.claude/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings
+
+# ===== NuGet =====
+*.nupkg
+**/packages/*
+
+# ===== 日志 =====
+Logs/
+*.log
+
+# ===== 临时文件 =====
+*.tmp
+*.temp
+~$*
+Thumbs.db
+
+# ===== 操作系统 =====
+.DS_Store
+Desktop.ini

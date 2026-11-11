@@ -1,0 +1,147 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ci="http://classisland.tech/schemas/xaml/core"
+             mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="500"
+             x:Class="EntertainingIsland.Views.WelcomePages.FeaturesPage">
+    <UserControl.Styles>
+        <Style Selector="Border.card">
+            <Setter Property="Opacity" Value="0"/>
+            <Setter Property="RenderTransform"><TranslateTransform X="40"/></Setter>
+            <Setter Property="CornerRadius" Value="6"/>
+            <Setter Property="Background" Value="{DynamicResource CardBackgroundFillColorDefaultBrush}"/>
+        </Style>
+        <Style Selector="Border.card-highlight">
+            <Setter Property="Opacity" Value="0"/>
+            <Setter Property="RenderTransform"><TranslateTransform X="40"/></Setter>
+            <Setter Property="CornerRadius" Value="6"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource CardBackgroundFillColorDefaultBrush}"/>
+        </Style>
+        <Style Selector="Border.highlight">
+            <Setter Property="Opacity" Value="0"/>
+            <Setter Property="RenderTransform"><TranslateTransform Y="30"/></Setter>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Background" Value="{DynamicResource CardBackgroundFillColorDefaultBrush}"/>
+        </Style>
+    </UserControl.Styles>
+    <Grid RowDefinitions="Auto, *, Auto" Margin="32,16">
+        <StackPanel Grid.Row="0" Spacing="4" Margin="0,0,0,16">
+            <TextBlock Text="欢迎使用 EntertainingIsland！" FontSize="24" FontWeight="SemiBold"/>
+            <TextBlock Text="为 ClassIsland 打造的娱乐插件，让同学眼前一亮，老师眼前一黑。" FontSize="14" Opacity="0.6" TextWrapping="Wrap"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Spacing="16">
+                <!-- Highlight 1: Avatar (text top, screenshot full-width below) -->
+                <Border Classes="highlight" x:Name="HighlightAvatar" Padding="16">
+                    <StackPanel Spacing="10">
+                        <StackPanel Spacing="8">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <ci:FluentIcon Glyph="&#xECE5;" FontSize="20" Foreground="{DynamicResource SystemAccentColorBrush}"/>
+                                <TextBlock Text="头像课程表" FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock Text="用老师的头做课程表，还能自定义透明、黑白等特效，上一个掉一个" FontSize="13" Opacity="0.6" TextWrapping="Wrap"/>
+                        </StackPanel>
+                        <Image x:Name="ScreenshotAvatar" Stretch="Uniform" MaxWidth="600" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Border>
+                <!-- Highlight 2: Class Ending Reminder (text top, screenshot full-width below) -->
+                <Border Classes="highlight" x:Name="HighlightCountdown" Padding="16">
+                    <StackPanel Spacing="10">
+                        <StackPanel Spacing="8">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <ci:FluentIcon Glyph="&#xE4C3;" FontSize="20" Foreground="{DynamicResource SystemAccentColorBrush}"/>
+                                <TextBlock Text="下课倒计时" FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock Text="弥补ClassIsland只有即将上课提醒，没有即将下课倒计时的不足" FontSize="13" Opacity="0.6" TextWrapping="Wrap"/>
+                        </StackPanel>
+                        <Image x:Name="ScreenshotCountdown" Stretch="Uniform" MaxWidth="600" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Border>
+                <WrapPanel x:Name="CardsPanel">
+                    <Border Classes="card" Padding="14" Width="200" Height="100" Margin="0,0,12,12">
+                        <StackPanel Spacing="6">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <ci:FluentIcon Glyph="&#xE214;" FontSize="16"/><TextBlock Text="小说阅读器" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock Text="在课表上偷偷看 txt 小说" FontSize="12" Opacity="0.6" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Classes="card" Padding="14" Width="200" Height="100" Margin="0,0,12,12">
+                        <StackPanel Spacing="6">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <ci:FluentIcon Glyph="&#xE3E3;" FontSize="16"/><TextBlock Text="口头禅记录" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock Text="记录老师口头禅次数，支持语音识别" FontSize="12" Opacity="0.6" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Classes="card" Padding="14" Width="200" Height="100" Margin="0,0,12,12">
+                        <StackPanel Spacing="6">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <ci:FluentIcon Glyph="&#xEEAC;" FontSize="16"/><TextBlock Text="RSS 新闻" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock Text="课表上滚动显示新闻标题" FontSize="12" Opacity="0.6" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Classes="card" Padding="14" Width="200" Height="100" Margin="0,0,12,12">
+                        <StackPanel Spacing="6">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <ci:FluentIcon Glyph="&#xECAE;" FontSize="16"/><TextBlock Text="点名器" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock Text="随机抽人，支持 txt 导入名单" FontSize="12" Opacity="0.6" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Classes="card" Padding="14" Width="200" Height="100" Margin="0,0,12,12">
+                        <StackPanel Spacing="6">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <ci:FluentIcon Glyph="&#xF024;" FontSize="16"/><TextBlock Text="体育赛事" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock Text="NBA/英超/西甲等实时比分" FontSize="12" Opacity="0.6" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Classes="card-highlight" Padding="14" Width="200" Height="100" Margin="0,0,12,12">
+                        <StackPanel Spacing="6">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <ci:FluentIcon Glyph="&#xEFFE;" FontSize="16" Foreground="{DynamicResource SystemAccentColorBrush}"/>
+                                <TextBlock Text="每日运势" FontWeight="SemiBold" VerticalAlignment="Center" Foreground="{DynamicResource SystemAccentColorBrush}"/>
+                            </StackPanel>
+                            <TextBlock Text="看看今天的运势如何" FontSize="12" Opacity="0.6" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Classes="card" Padding="14" Width="200" Height="100" Margin="0,0,12,12">
+                        <StackPanel Spacing="6">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <ci:FluentIcon Glyph="&#xE392;" FontSize="16"/><TextBlock Text="摄像头安全" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock Text="老师看监控时进行提醒" FontSize="12" Opacity="0.6" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                </WrapPanel>
+                <Border Padding="16" CornerRadius="8" Background="{DynamicResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{DynamicResource SystemFillColorCriticalBrush}" BorderThickness="1">
+                    <StackPanel Spacing="6">
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <ci:FluentIcon Glyph="&#xE024;" FontSize="18" Foreground="{DynamicResource SystemFillColorCriticalBrush}"/>
+                            <TextBlock Text="遇到危险怎么办？" FontSize="15" FontWeight="SemiBold"/>
+                        </StackPanel>
+                        <TextBlock Text="本插件不再注册任何全局快捷键。建议在 ClassIsland 的「自动化」中新建一条规则，把「隐藏所有组件」绑定到你自己的触发方式上，需要时一键清屏。" FontSize="13" Opacity="0.7" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+                <Border Padding="16" CornerRadius="8" Background="{DynamicResource CardBackgroundFillColorDefaultBrush}">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="了解更多" FontSize="15" FontWeight="SemiBold"/>
+                        <StackPanel Spacing="6">
+                            <Button Content="观看宣传片" Click="LinkBilibili_Click"/>
+                            <Button Content="访问作者网站" Click="LinkAuthor_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8" Margin="0,16,0,0">
+            <Button Content="上一步" Click="ButtonBack_OnClick"/>
+            <Button Content="下一步" Classes="accent" Click="ButtonNext_OnClick"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

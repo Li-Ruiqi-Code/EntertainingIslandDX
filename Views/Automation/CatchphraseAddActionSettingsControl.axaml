@@ -1,0 +1,21 @@
+<ci:ActionSettingsControlBase x:TypeArguments="models:CatchphraseAddActionSettings"
+    x:Class="EntertainingIsland.Views.Automation.CatchphraseAddActionSettingsControl"
+    x:Name="SettingsRoot"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ci="http://classisland.tech/schemas/xaml/core"
+    xmlns:models="clr-namespace:EntertainingIsland.Models"
+    xmlns:local="clr-namespace:EntertainingIsland.Views.Automation"
+    mc:Ignorable="d"
+    d:DesignHeight="90" d:DesignWidth="420">
+
+    <StackPanel Spacing="6"
+                DataContext="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=local:CatchphraseAddActionSettingsControl}}">
+        <TextBlock Text="为哪句口头禅 +1（留空则使用口头禅预设中的第一条）"
+                   FontSize="12" Opacity="0.6" TextWrapping="Wrap" />
+        <TextBox Text="{Binding Settings.Phrase}" Watermark="例如：不要讲话" />
+    </StackPanel>
+
+</ci:ActionSettingsControlBase>
