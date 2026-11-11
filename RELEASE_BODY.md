@@ -1,6 +1,17 @@
-# 1.2.0.0
+# 1.2.0.1
 
-首个由 Li-Ruiqi-Code 维护的版本，基于 [BSOD-MEMZ/EntertainingIsland](https://github.com/BSOD-MEMZ/EntertainingIsland) 修改。
+基于 [BSOD-MEMZ/EntertainingIsland](https://github.com/BSOD-MEMZ/EntertainingIsland) 修改。
+
+### 本版变更（1.2.0.0 → 1.2.0.1）
+
+- 程序集元数据 `AssemblyCompany` 由 `xxtsoft` 改为 `Li-Ruiqi-Code`。
+- `manifest.yml` 的 `author` 改为 `Li-Ruiqi-Code`。
+- 设置页「关于」文本署名改为 `Li-Ruiqi-Code`。
+- 欢迎向导「观看宣传片」「访问作者网站」改为「查看项目主页」「查看更新日志」，指向本项目仓库，移除原作者 B 站视频与个人站点链接。
+
+---
+
+首次发布以来的完整变更：
 
 ### 破坏性变更
 
@@ -21,7 +32,7 @@
 - **点名器算法改为完全随机**：每次点名独立均匀抽样，移除加权爆率与保底机制，隐藏面板一并删除。
 - **头像课程表显示当堂上课时间**：在当前课程头像右侧显示 `HH:mm-HH:mm`。上课时显示当前课，课间显示即将开始的下一节课；当堂课程始终高亮。
 - **项目更名并改用 GPLv3 许可证**：新增 `LICENSE`，源码文件头部添加版权声明。
-- 统一版本号：`manifest.yml` / `AssemblyInfo.cs` 均为 `1.2.0.0`。
+- 统一版本号：`manifest.yml` / `AssemblyInfo.cs` 保持一致。
 - manifest 仓库地址与分支更新为 `Li-Ruiqi-Code/EntertainingIslandDX` / `main`。
 - 程序集元数据与插件作者改为 `Li-Ruiqi-Code`，移除原作者个人站点与宣传片入口。
 
@@ -42,4 +53,4 @@
 - 移除 README 中指向原作者网盘、个人站点与 B 站宣传片的链接。
 - 更新 OOBE 欢迎向导与 README，移除热键与警报相关描述。
 
-<!-- CLASSISLAND_PKG_MD5 {"entertainingisland.app.cipx": "d44f86e81832679582ffbfebf9a40c36"} -->
+<!-- CLASSISLAND_PKG_MD5 {"entertainingisland.app.cipx": "c9194c01e926c899cd67553e2d6d2a59"} -->

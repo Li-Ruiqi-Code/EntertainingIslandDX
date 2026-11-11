@@ -5,7 +5,7 @@ description: ClassIsland 娱乐功能插件 - 下课倒计时、小说阅读器�
 entranceAssembly: "EntertainingIsland.dll"
 url: https://github.com/Li-Ruiqi-Code/EntertainingIslandDX
 author: Li-Ruiqi-Code
-version: 1.2.0.0
+version: 1.2.0.1
 repoOwner: Li-Ruiqi-Code
 repoName: EntertainingIslandDX
 assetsRoot: main
