@@ -179,3 +179,21 @@ dotnet build -c Release
 - `README.md` — 说明文档（可选）
 
 ---
+
+## 许可证
+
+本项目采用 **GNU General Public License v3.0** 授权，完整条款见 [LICENSE](LICENSE)。
+
+```
+Copyright (C) 2026  Li-Ruiqi-Code
+Copyright (C) 2025  xxt8582753 (BSOD-MEMZ) — 原始 EntertainingIsland 项目
+```
+
+本项目基于 [BSOD-MEMZ/EntertainingIsland](https://github.com/BSOD-MEMZ/EntertainingIsland) 修改而来。
+依据 GPLv3，你可以自由使用、修改和分发本项目，但分发时必须：
+
+- 保留相同的 GPLv3 许可证
+- 提供完整的源代码
+- 保留原始版权声明
+
+---
